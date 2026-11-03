@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rp-ci"
+version = "0.1.0"
+description = "Random-projection aggregation for conditional independence testing"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.1", "scipy>=1.15", "joblib>=1.4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+experiments = ["causal-learn>=0.1.4.3", "tigramite>=5.2", "numba", "anndata>=0.10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rp_ci*"]
+namespaces = false
