@@ -52,7 +52,10 @@ python rpgcm.py --n 2000 --dz 1 5 10 50 --out table11_a.csv
 python rpgcm.py --models N1 N2 --n 500 1000 2000 5000 --dz 50 --out table11_b.csv
 ```
 
-Tables 3, 12 and 13; Tables 3 and 12 average the rows of `dag.csv`:
+Tables 3, 12 and 13. From `dag.csv`, Table 3 averages the `full_rank` rows by
+method across the four `(n, q)` settings; Table 12 averages by mechanism, `n`,
+`q` and method. Both report mean SHD and the fraction of rows with `shd == 0`
+(exact recovery):
 
 ```bash
 python dag.py --out dag.csv
@@ -60,7 +63,7 @@ python dag.py --matched-null --methods rpgcm max_gcm cmiknn rcit --reps 1000 --o
 python dag.py --matched-null --methods kci --reps 100 --out table13_kci.csv
 ```
 
-Figures 2 and 3:
+Figure 2:
 
 ```bash
 python cifar.py --out cifar.csv

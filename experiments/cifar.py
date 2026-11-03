@@ -1,6 +1,6 @@
-"""CIFAR-10 patches: Figures 2 and 3 (Appendix D.5).
+"""CIFAR-10 patches: Figure 2 (Appendix D.5).
 
-One CSV row per (method, n, eta) with rejection counts; Figure 2 is the RP-CIT rows.
+One CSV row per (method, n, eta) with rejection counts for all five methods.
 """
 from __future__ import annotations
 
